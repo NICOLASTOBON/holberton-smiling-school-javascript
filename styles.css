@@ -1,0 +1,343 @@
+@font-face {
+    font-family: 'holberton-icon';
+    src:
+      url('/holberton_school-icon/fonts');
+    src:
+      url('/holberton_school-icon/fonts/holberton_school-icon.ttf') format('embedded-opentype'),
+      url('/holberton_school-icon/fonts/holberton_school-icon.ttf') format('truetype'),
+      url('/holberton_school-icon/fonts/holberton_school-icon.woff') format('woff'),
+      url('/holberton_school-icon/fonts/holberton_school-icon.svg') format('svg');
+  }
+  
+  :root {
+    --primary-color: #C271FF;
+    --secondary-color: #071629;
+  
+    --color-white: #fff;
+    --color-white-transparent: #ffffffb6;
+    --grey-light: #afafaf;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    font-size: 62.5%;
+  }
+  
+  .text-color-main {
+    color: var(--primary-color);
+  }
+  
+  .bg-color-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  /** HERO IMAGE */
+  .hero-img {
+    background: url("/images/pic_1.jpg") center no-repeat fixed;
+    background-size: cover;
+  }
+  
+  .hero-img.-pricing{
+    background: url("/images/pic_2.jpg") top no-repeat fixed;
+    background-size: cover;
+  }
+  
+  .hero-img.-courses {
+    background: url('/images/pic_3.jpg') center no-repeat fixed;
+    background-size: cover
+  }
+  
+  /** BTN */
+  .btn-color,
+  .section-carousel,
+  .section-search {
+    background-color: var(--primary-color);
+  }
+  .btn-color:hover {
+    opacity: 0.9;
+  }
+  
+  button.btn-color {
+    padding: .9rem 1.8rem !important;
+    font-size: 1rem;
+  }
+  
+  /** HEADER */
+  
+  header div .logo {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .logo .logo-smile {
+    width: 4.5rem;
+  }
+  
+  .logo .logo-text {
+    width: 15rem;
+  }
+  
+  .burgerIcon {
+    top: 2rem;
+    cursor: pointer;
+  }
+  
+  div[aria-expanded="true"]::before,
+  div[aria-expanded="false"]::before {
+    font-size: 3.3rem;
+    color: var(--color-white);
+  }
+  
+  div[aria-expanded="true"]::before {
+    content: "\00D7";
+    font-weight: bold;
+  }
+  
+  div[aria-expanded="false"]::before {
+    content: "\e911";
+    font-family: holberton-icon;
+  }
+  
+  .nav-item-link {
+    font-size: 1.4rem;
+  }
+  
+  /** HERO SECTION */
+  
+  .hero-content h1,
+  .faq-section h2 {
+    font-size: 5rem;
+  }
+  
+  .hero-content div p,
+  .card-body h5,
+  .membership-articles img + p {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content a,
+  .membership-section div a {
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  
+  .hero h2 {
+    font-size: 3rem ;
+  }
+  
+  /** HERO ARTICLES */
+  
+  .hero-articles img {
+    width: 16rem;
+  }
+  
+  .hero-articles article img + p,
+  .carousel-content .content-text + p {
+    font-size: 1.8rem;
+  }
+  
+  .hero-articles article img + p + p,
+  .carousel-content .content-text + p + p {
+    font-size: 1.3rem;
+  }
+  
+  @media (max-width: 425px) {
+    .col-6 {
+      max-width: 100%;
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+  }
+  
+  /** SECTION CAROUSEL */
+  
+  .carousel-content img {
+    width: 14rem;
+  }
+  
+  .carousel a > img {
+    width: 3.6rem;
+  }
+  
+  .video {
+    top: 3rem;
+    left: 6rem;
+    padding: 2.4rem;
+    background-color: var(--color-white-transparent);
+    transform: rotate(-90deg);
+  }
+  
+  .video-play {
+    width: 0;
+    height: 0;
+    top: 1.8rem;
+      border-left: 1rem solid transparent;
+    border-top: 2rem solid var(--primary-color);
+    border-right: 1rem solid transparent;
+  }
+  
+  .carousel-content .content-text {
+    font-size: 2rem;
+  }
+  
+  .section-courses .card {
+    width: 20rem;
+    margin: 0 auto;
+  }
+  
+  .section-courses .card .card-img-top {
+    width: 100%;
+  }
+  
+  .card-review-img img {
+    width: 3rem;
+  }
+  
+  .card-review-img p,
+  .card-body p,
+  .membership-articles img + p + p,
+  button + h2 + span,
+  .faq-section .faq-content p {
+    font-size: 1.2rem;
+  }
+  
+  .calification-star img {
+    width: 1.5rem;
+  }
+  
+  /** MEMBERSHIP SECTION */
+  
+  .membership-articles img {
+    width: 4rem;
+  }
+  
+  /** FOOter */
+  
+  .facebook-icon::before,
+  .instagram-icon::before,
+  .twitter-icon::before {
+    font-family: holberton-icon;
+    font-size: 3.3rem;
+    color: var(--color-white);
+  }
+  
+  .instagram-icon::before {
+    content: "\e90a";
+  }
+  
+  .twitter-icon::before {
+    content: "\e90f";
+  }
+  
+  .facebook-icon::before {
+    content: "\e908";
+  }
+  
+  .search-icon::before {
+    content: "\e912";
+  }
+  
+  .social-media a {
+    text-decoration: none;
+  }
+  
+  .social-media a span:hover::before {
+    color: var(--primary-color);
+  }
+  
+  /** CONTENT TITLE PRICING */
+  .content-title {
+    font-size: 2rem;
+  }
+  
+  button + h2 {
+    font-size: 3rem !important;
+  }
+  
+  @media (min-width: 1000px) {
+    button.btn-color {
+      padding: 1rem 2rem !important;
+      font-size: 1.5rem;
+    }
+  
+    button + h2 {
+      font-size: 3.9rem !important;
+    }
+  }
+  
+  .th-text {
+    font-size: 1.5rem;
+  }
+  
+  .check-icon::before {
+    content: "\e905";
+    font-size: 3rem;
+    font-family: holberton-icon;
+    color: #82D24F;
+  }
+  .signal-icon {
+    width: 8rem;
+  }
+  
+  /** COURSES */
+  
+  .search-input input,
+  a.btn-secondary  {
+    text-indent: 1.2rem;
+    background-color: #ffffff42;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--color-white) !important;
+    outline: 0;
+  }
+  
+  .search-input input:focus {
+    color: var(--color-white);
+    border-color: #545b62;
+    box-shadow: 0 0 0 0.2rem rgb(130 138 145 / 50%);
+  }
+  
+  .search-input input::placeholder {
+    font-size: 1.2rem;
+    color: var(--color-white);
+  }
+  
+  .search-input span {
+    top: 2.4rem;
+    left: 2.1rem;
+  }
+  
+  .search-icon::before {
+    font-family: holberton-icon;
+    font-size: 1.5rem;
+    color: var(--color-white);
+  }
+  
+  a.btn-secondary:hover,
+  a.btn-secondary:focus {
+    background: #ffffff42 !important;
+  }
+  
+  .section-search label {
+    font-size: 1.1rem;
+  }
+  
+  .dropdown-item:hover {
+    color: var(--primary-color) !important;
+  }
+  
+  #topics,
+  #most {
+    width: 93%;
+    margin: 0 1.2rem;
+  }
+  
+  .videos-content .card {
+    width: 30rem;
+    margin: 5rem 3rem;
+  }
+  
+  .videos-content .card .video {
+    top: 4rem;
+    left: 11rem;
+  }

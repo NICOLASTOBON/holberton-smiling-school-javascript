@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Homepage </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="hero-img -courses">
+        <header class="container text-center">
+            <nav class="navbar p-0">
+            <div class="col-md-7 px-0 pt-5 pb-4">
+                <a
+                href="/homepage.html"
+                class="d-flex flex-column flex-md-row align-items-center logo m-md-0"
+                >
+                <img
+                    src="/images/smile_off.png"
+                    class="logo-smile"
+                    alt="Logotype Smile"
+                />
+                <img
+                    src="/images/logo.png"
+                    class="logo-text my-2 mx-md-5 mt-md-2"
+                    alt="Isotype SmileSchool"
+                />
+                </a>
+            </div>
+            <div
+                class="burgerIcon position-absolute d-md-none"
+                data-toggle="collapse"
+                aria-controls="collapseNav"
+                aria-expanded="false"
+                href="#collapseNav"
+                aria-label="Open Navigation"
+            ></div>
+            <div class="col-md-5 px-0 collapse d-md-block" id="collapseNav">
+                <ul
+                class="nav d-flex flex-column flex-md-row justify-content-md-between"
+                >
+                <li class="mt-2 mt-md-0">
+                    <a href="/courses.html" class="text-white nav-item-link">COURSES</a>
+                </li>
+                <li class="mt-2 mt-md-0">
+                    <a href="/pricing.html" class="text-white nav-item-link">PRICING</a>
+                </li>
+                <li class="mt-2 mt-md-0">
+                    <a href="/homepage.html" class="text-white nav-item-link">LOGIN</a>
+                </li>
+                </ul>
+            </div>
+            </nav>
+        </header>
+        <section class="hero container">
+            <div class="text-center px-3 py-5 hero-content my-0 mt-md-5">
+                <div class="d-none d-md-block">
+                    <h1 class="py-5 font-weight-bold text-white">
+                        « Don’t cry because it’s over. 
+                        <span class="text-color-main" > <br> Smile</span> because it happened. »
+                    </h1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <main>
+        <section class="section-search">
+            <div class="container">
+                <div class="dropdown px-3 py-5 row align-items-center">
+                    <div class="col-12 col-lg-4 search-input mb-3 mt-4 d-flex flex-column">
+                        <label for="searchField" class="text-white w-100">Keywords</label>
+                        <input type="text" id="searchField" class="position-relative py-2 px-4 text-white border-0 w-100" placeholder="Search by keywords" 
+                        aria-describedby="basicSearch">
+                        <span class="search-icon position-absolute"></span>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 dropdown mb-3 mt-4">
+                        <label for="topicsField" class="text-white w-auto">Topics</label>
+                        <a class="btn btn-secondary d-flex justify-content-between align-items-center dropdown-toggle w-100 text-left py-2 px-4 border-0 rounded-0" href="#topics" role="button" id="topicsField" data-toggle="collapse" aria-expanded="false">
+                            Novice
+                        </a>
+                        
+                        <ul id="topics" class="collapse dropdown-menu" aria-labelledby="topicsField">
+                            <li><a class="dropdown-item" href="#">Novice</a></li>
+                            <li><a class="dropdown-item" href="#">Intermediate</a></li>
+                            <li><a class="dropdown-item" href="#">Expert</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 dropdown mb-3 mt-4">
+                        <label for="mostField" class="text-white w-100">Sort by</label>
+                        <a class="btn btn-secondary d-flex justify-content-between align-items-center dropdown-toggle w-100 text-left py-2 px-4 border-0 rounded-0" href="#most" role="button" id="mostField" data-toggle="collapse" aria-expanded="false">
+                            Most popular
+                        </a>
+                        
+                        <ul id="most" class="collapse dropdown-menu" aria-labelledby="mostField">
+                            <li><a class="dropdown-item" href="#">Most Popular</a></li>
+                            <li><a class="dropdown-item" href="#">Most Recent</a></li>
+                            <li><a class="dropdown-item" href="#">Most Viewed</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <p class="m-5 pt-4 text-black-50">11 videos</p>
+
+                <div class="videos-container my-5 d-flex flex-wrap justify-content-center align-items-center">
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="videos-content">
+                        <div class="card">
+                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
+                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="card-body">
+                                <p class="card-title font-weight-bold">Diagonal Smile</p>
+                                <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
+                                <div class="card-review mt-5">
+                                    <div class="card-review-img d-flex align-items-center justify-content-between">
+                                        <img src="/images/profile_2.jpg"  class="rounded-circle" alt="Image Nannie Lawrence">
+                                        <p class="text-color-main">Nannie Lawrence</p>
+                                    </div>
+                                    <div class="card-review-calification row align-items-center">
+                                        <div class="calification-star col-7 mt-3">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_on.png" alt="Star on">
+                                            <img src="/images/star_off.png" alt="Star off">
+                                        </div>
+                                        <span class="col-5 text-right text-color-main mt-3">8 min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-color-secondary">
+        <div class="container p-5 text-center">
+            <div class="mb-5 d-md-flex align-items-center justify-content-between">
+                <div class="logo">
+                    <img src="/images/smile_off.png" class="logo-smile mr-3" alt="logo smile">
+                    <img src="/images/logo.png" class="logo-text" alt="Logo smileshools">
+                </div>
+                <div class="social-media mt-4 mt-md-0">
+                    <a href="#" aria-label="facebook"><span class="facebook-icon"></span></a>
+                    <a href="#" aria-label="twitter"><span class="twitter-icon"></span></a>
+                    <a href="#" aria-label="instagram"><span class="instagram-icon"></span></a>
+                </div>
+            </div>
+            <span class="text-secondary text-center my-5">©smileschool 2020</span>
+        </div>
+    </footer>
+</body>
+</html>
