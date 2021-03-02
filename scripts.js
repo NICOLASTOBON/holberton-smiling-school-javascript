@@ -1,80 +1,69 @@
-
-// HOMEPAGE LOADING 
-
-let displayCard = (data) => {
-    let carousel = document.querySelector('.carousel-inner')
-    
-    let carouselItem = document.createElement('div')
-    carouselItem.className = `carousel-item`
-    carouselItem.dataset.ride = `carousel`
-    
-    if (data.id === 1) {
-        carouselItem.classList.add('active')
+class UI {
+    constructor() {
+        this.loader = document.querySelector('.load-container')
+        this.testimonialsCarousel = document.querySelector('#carouselExampleControls')
+        this.testimonialsInner = document.querySelector('.carousel-inner')
     }
-    
-    let carouselContent = document.createElement('div')
-    carouselContent.className = `carousel-content d-md-flex text-center my-5 text-md-left align-items-center justify-content-center`
-    
-    let mainImage = document.createElement('img')
-    mainImage.src = `${data.pic_url}`
-    mainImage.className = `rounded-circle`
-    mainImage.alt = 'Person carousel'
-    
-    let carouselContentText = document.createElement('div')
-    carouselContentText.className = `carousel-content-text w-50 my-4 mx-auto m-md-0 ml-md-5`
-    
-    let paragraph = document.createElement('p')
-    paragraph.className = `text-white content-text`
-    paragraph.textContent = `${data.text}`
-    
-    let name = document.createElement('p')
-    name.className = `text-white font-weight-bold`
-    name.textContent = `${data.name}`
-    
-    let title = document.createElement('p')
-    title.className = `text-white font-italic`
-    title.textContent = `${data.title}`
-    
-    carouselContentText.append(paragraph, name, title)
-    carouselContent.append(mainImage, carouselContentText)
-    carouselItem.append(carouselContent)
-    carousel.append(carouselItem)
-}
 
-const displayLoading = (loading) => {
-    let list = document.querySelector('.section-main-carousel')
-    let container = document.querySelector('.section-carousel')
-
-    let loadContainer = document.createElement('div')
-    loadContainer.className = 'load-container'
-    let load = document.createElement('div')
-    load.className = 'loader'
-
-    loadContainer.append(load)
+    showTestimonials(testimonials) {
+        testimonials.forEach((testimonial) => {
+            let carouselItem = document.createElement('div')
+            carouselItem.classList.add('carousel-item')
     
-    if (loading) {
-        container.style.display = 'none'
-        list.prepend(loadContainer)
-
-    } else {
-        let loaded = document.querySelector('.load-container')
-        list.removeChild(loaded)
-        container.style.display = 'block'
+            carouselItem.innerHTML = `
+            <div class="carousel-content d-md-flex text-center my-5 text-md-left align-items-center justify-content-center">
+                <img src="${testimonial.pic_url}" class="rounded-circle" alt="Person carousel">
+                <div class="carousel-content-text w-50 my-4 mx-auto m-md-0 ml-md-5">
+                    <p class="text-white content-text">${testimonial.text}</p>
+                    <p class="text-white font-weight-bold">${testimonial.name}</p>
+                    <p class="text-white font-italic">${testimonial.title}</p>
+                </div>
+            </div>
+            `
+            this.testimonialsInner.append(carouselItem)
+        })
+        console.log(this.testimonialsInner)
+        this.testimonialsInner.children[0].classList.add('active')
+        this.loader.classList.add('d-none')
+        this.testimonialsCarousel.classList.remove('d-none')
     }
 }
 
-let getCard = async () => {
-
-    displayLoading(true)
-
-    let data = await fetch('https://smileschool-api.hbtn.info/quotes')
-    let response = await data.json()
-
-    return response
+class SmileSchool {
+    async getTestimonials () {
+        let data = await fetch('https://smileschool-api.hbtn.info/quotes')
+        let response = await data.json()
+        return response
+    }
 }
 
-getCard()
-    .then((res) => {
-        displayLoading(false)
-        res.forEach(item => displayCard(item))
-    })
+const App = (function () {
+
+    let ui, smileschool
+
+    //Determine which page user is on
+    function render() {
+        const view = document.querySelector('body').id
+
+        //Instantiate UI and API controllers
+        ui = new UI()
+        smileschool = new SmileSchool()
+
+        //populate page
+        paint(view)
+    }
+
+    function paint(view) {
+        if (view === 'homepage') {
+            //fetch testimonials from API
+            smileschool.getTestimonials()
+                .then(data => {
+                    ui.showTestimonials(data)
+                })
+        }
+    }
+    return {render}
+})()
+
+// start rendering content on page load
+document.addEventListener('load', App.render())
