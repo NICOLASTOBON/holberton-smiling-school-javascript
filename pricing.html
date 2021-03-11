@@ -17,15 +17,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer ></script>
 </head>
-<body>
+<body id="pricing">
     <div class="hero-img -pricing">
         <header class="container text-center">
             <nav class="navbar p-0">
             <div class="col-md-7 px-0 pt-5 pb-4">
                 <a
-                href="/1-homepage.html"
+                href="/homepage.html"
                 class="d-flex flex-column flex-md-row align-items-center logo m-md-0"
                 >
                 <img
@@ -53,10 +53,10 @@
                 class="nav d-flex flex-column flex-md-row justify-content-md-between"
                 >
                 <li class="mt-2 mt-md-0">
-                    <a href="/0-courses.html" class="text-white nav-item-link">COURSES</a>
+                    <a href="/courses.html" class="text-white nav-item-link">COURSES</a>
                 </li>
                 <li class="mt-2 mt-md-0">
-                    <a href="/0-pricing.html" class="text-white nav-item-link">PRICING</a>
+                    <a href="/pricing.html" class="text-white nav-item-link">PRICING</a>
                 </li>
                 <li class="mt-2 mt-md-0">
                     <a href="#" class="text-white nav-item-link">LOGIN</a>
@@ -150,48 +150,24 @@
         </section>
     </div>    
     <main>
-        <section id="sectionCarousel" class="section-carousel">
-            <div id="carouselExampleControls" class="carousel slide container">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-ride="carousel">
-                        <div class="carousel-content d-md-flex text-center my-5 text-md-left align-items-center justify-content-center">
-                            <img src="/images/profile_5.jpg" class="rounded-circle" alt="Person carousel">
-                            <div class="carousel-content-text w-50 my-4 mx-auto m-md-0 ml-md-5">
-                                <p class="text-white content-text">« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</p>
-                                <p class="text-white font-weight-bold">Umi Wilson</p>
-                                <p class="text-white font-italic">weather presenter</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-content d-md-flex text-center my-5 text-md-left align-items-center justify-content-center">
-                            <img src="/images/profile_5.jpg" class="rounded-circle" alt="Person carousel">
-                            <div class="carousel-content-text w-50 my-4 mx-auto m-md-0 ml-md-5">
-                                <p class="text-white content-text">« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</p>
-                                <p class="text-white font-weight-bold">Umi Wilson</p>
-                                <p class="text-white font-italic">weather presenter</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="carousel-content d-md-flex text-center my-5 text-md-left align-items-center justify-content-center">
-                            <img src="/images/profile_5.jpg" class="rounded-circle" alt="Person carousel">
-                            <div class="carousel-content-text w-50 my-4 mx-auto m-md-0 ml-md-5">
-                                <p class="text-white content-text">« Those tutorials are concise and go straight to the point. I can’t think of a better place to learn smiling. And it’s so fun!</p>
-                                <p class="text-white font-weight-bold">Umi Wilson</p>
-                                <p class="text-white font-italic">weather presenter</p>
-                            </div>
-                        </div>
-                    </div>
+        <section class="section-main-carousel">
+            <div id="sectionCarousel" class="section-carousel">
+                <div class="load-container">
+                    <div class="loader"></div>
                 </div>
-                <a href="#carouselExampleControls" class="carousel-control-prev" role="button" data-slide="prev">
-                    <img src="/images/arrow_white_left.png" alt="Arrow left" aria-hidden="true">
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a href="#carouselExampleControls" class="carousel-control-next" role="button" data-slide="next">
-                    <img src="/images/arrow_white_right.png" alt="Arrow left" aria-hidden="true">
-                    <span class="sr-only">Next</span>
-                </a>
+                <div id="carouselExampleControls" class="carousel slide container d-none">
+                    <div id="testimonials" class="carousel-inner">
+                        <!-- cards -->
+                    </div>
+                    <a href="#carouselExampleControls" class="carousel-control-prev" role="button" data-slide="prev">
+                        <img src="/images/arrow_white_left.png" alt="Arrow left" aria-hidden="true">
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a href="#carouselExampleControls" class="carousel-control-next" role="button" data-slide="next">
+                        <img src="/images/arrow_white_right.png" alt="Arrow left" aria-hidden="true">
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
             </div>
         </section>
         <section class="faq-section">

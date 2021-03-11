@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Homepage </title>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Coiny&display=swap" rel="stylesheet">
 
@@ -57,7 +59,7 @@
                     <a href="/0-pricing.html" class="text-white nav-item-link">PRICING</a>
                 </li>
                 <li class="mt-2 mt-md-0">
-                    <a href="/0-homepage.html" class="text-white nav-item-link">LOGIN</a>
+                    <a href="#" class="text-white nav-item-link">LOGIN</a>
                 </li>
                 </ul>
             </div>
@@ -76,51 +78,61 @@
     </div>
     <main>
         <section class="section-search">
-            <div class="container">
-                <div class="dropdown px-3 py-5 row align-items-center">
-                    <div class="col-12 col-lg-4 search-input mb-3 mt-4 d-flex flex-column">
-                        <label for="searchField" class="text-white w-100">Keywords</label>
-                        <input type="text" id="searchField" class="position-relative py-2 px-4 text-white border-0 w-100" placeholder="Search by keywords" 
-                        aria-describedby="basicSearch">
-                        <span class="search-icon position-absolute"></span>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 dropdown mb-3 mt-4">
-                        <label for="topicsField" class="text-white w-auto">Topics</label>
-                        <a class="btn btn-secondary d-flex justify-content-between align-items-center dropdown-toggle w-100 text-left py-2 px-4 border-0 rounded-0" href="#topics" role="button" id="topicsField" data-toggle="collapse" aria-expanded="false">
-                            Novice
-                        </a>
-                        
-                        <ul id="topics" class="collapse dropdown-menu" aria-labelledby="topicsField">
-                            <li><a class="dropdown-item" href="#">Novice</a></li>
-                            <li><a class="dropdown-item" href="#">Intermediate</a></li>
-                            <li><a class="dropdown-item" href="#">Expert</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-4 dropdown mb-3 mt-4">
-                        <label for="mostField" class="text-white w-100">Sort by</label>
-                        <a class="btn btn-secondary d-flex justify-content-between align-items-center dropdown-toggle w-100 text-left py-2 px-4 border-0 rounded-0" href="#most" role="button" id="mostField" data-toggle="collapse" aria-expanded="false">
-                            Most popular
-                        </a>
-                        
-                        <ul id="most" class="collapse dropdown-menu" aria-labelledby="mostField">
-                            <li><a class="dropdown-item" href="#">Most Popular</a></li>
-                            <li><a class="dropdown-item" href="#">Most Recent</a></li>
-                            <li><a class="dropdown-item" href="#">Most Viewed</a></li>
-                        </ul>
-                    </div>
+            <div class="container p-0 bg-purple" id="search-filters">
+                <div class="container py-4 text-white text-uppercase font-weight-bold">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-12 col-lg-4 form-group">
+                                <label for="keywords" class="d-block">Keywords</label>
+                                <div class="input-group mb-2">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text bg-white">
+                                            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                                                fill-rule="evenodd" clip-rule="evenodd">
+                                                <path
+                                                    d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z" />
+                                                </svg>
+                                        </div>
+                                    </div>
+                                    <input type="text" id="keywords" placeholder="Search by keywords"
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 form-group">
+                                <label for="topic" class="d-block">Topic</label>
+                                <div class="input-group mb-2">
+                                    <select name="topic" id="topic" class="form-control">
+                                        <option value="all">All</option>
+                                        <option value="novice">Novice</option>
+                                        <option value="intermediate">Intermediate</option>
+                                        <option value="expert">Expert</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 form-group">
+                                <label for="sort-by" class="d-block">Sort By</label>
+                                <div class="input-group mb-2">
+                                    <select name="sort-by" id="sort-by" class="form-control">
+                                        <option value="most_popular">Most Popular</option>
+                                        <option value="most_recent">Most Recent</option>
+                                        <option value="most_viewed">Most Viewed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
         <section>
             <div class="container">
-                <p class="m-5 pt-4 text-black-50">11 videos</p>
+                <p class="my-5 ml-4 text-black-50">11 videos</p>
 
-                <div class="videos-container my-5 d-flex flex-wrap justify-content-center align-items-center">
-
-                    <div class="videos-content">
+                <div class="row">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_3.jpg" class="card-img-top" alt="Person card">
+                            <div class="video"><img src="/images/play.png" alt="play"> </div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -144,10 +156,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_2.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -171,10 +183,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_1.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -198,10 +210,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_3.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -225,10 +237,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_2.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -252,10 +264,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_1.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -279,10 +291,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_3.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -306,10 +318,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
                             <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -333,10 +345,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_1.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -360,10 +372,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
-                            <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <img src="/images/thumbnail_2.jpg" class="card-img-top" alt="Person card">
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
@@ -387,10 +399,10 @@
                         </div>
                     </div>
 
-                    <div class="videos-content">
+                    <div class="mb-5 col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
                         <div class="card">
                             <img src="/images/thumbnail_4.jpg" class="card-img-top" alt="Person card">
-                            <div class="video position-absolute rounded-circle"><span class="video-play position-relative"></span></div>
+                            <div class="video rounded-circle"><img src="/images/play.png" alt="Play"></div>
                             <div class="card-body">
                                 <p class="card-title font-weight-bold">Diagonal Smile</p>
                                 <p class="card-text text-secondary">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod.</p>
