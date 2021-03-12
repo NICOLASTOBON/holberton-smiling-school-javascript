@@ -10,9 +10,9 @@ class UI {
         this.loaderCourses = document.querySelector('#coursesContainer > .load-container')
         this.numberCourses = document.querySelector('#coursesContainer > h5')
         this.coursesList = document.querySelector('#coursesList')
-        this.keywordsField = document.querySelector('#keywords');
-        this.topicField = document.querySelector('#topic');
-        this.sortField = document.querySelector('#sort-by');
+        this.keywordsField = document.querySelector('#keywords')
+        this.topicField = document.querySelector('#topic')
+        this.sortField = document.querySelector('#sort-by')
     }
 
     showTestimonials(testimonials) {
@@ -129,33 +129,33 @@ class UI {
     }
 
     updateCourses (courses) {
-        this.clearCourses();
-        this.showCourses(courses);
+        this.clearCourses()
+        this.showCourses(courses)
     }
     
     clearCourses () {
         while (this.coursesList.firstElementChild) {
-            this.coursesList.firstElementChild.remove();
+            this.coursesList.firstElementChild.remove()
         }
     }
 
     slideOne(id) {
         $(`#${id} .carousel-item`).each(function () {
-            let minPerSlide = 4;
-            let next = $(this).next();
+            let minPerSlide = 4
+            let next = $(this).next()
             if (!next.length) {
-                next = $(this).siblings(":first");
+                next = $(this).siblings(":first")
             }
-            next.children(":first-child").clone().appendTo($(this));
+            next.children(":first-child").clone().appendTo($(this))
     
             for (let i = 0; i < minPerSlide; i++) {
-                next = next.next();
+                next = next.next()
                 if (!next.length) {
-                    next = $(this).siblings(":first");
+                    next = $(this).siblings(":first")
                 }
-                next.children(":first-child").clone().appendTo($(this));
+                next.children(":first-child").clone().appendTo($(this))
             }
-        });
+        })
     }
 
 }
@@ -186,9 +186,9 @@ class SmileSchool {
     }
 
     async getCoursesByFilter(keywords, topic, sortBy) {
-        let res = await window.fetch(`https://smileschool-api.hbtn.info/courses?q=${keywords}&topic=${topic}&sort=${sortBy}`);
-        res = await res.json();
-        return res;
+        let res = await window.fetch(`https://smileschool-api.hbtn.info/courses?q=${keywords}&topic=${topic}&sort=${sortBy}`)
+        res = await res.json()
+        return res
     }
 }
 
@@ -243,24 +243,25 @@ const App = (function () {
                     ui.showCourses(data.courses)
                 })
             // Listen for changes in search/filter fields
-            ui.keywordsField.addEventListener('input', filterCourses);
-            ui.topicField.addEventListener('input', filterCourses);
-            ui.sortField.addEventListener('input', filterCourses);
+            ui.keywordsField.addEventListener('input', filterCourses)
+            ui.topicField.addEventListener('input', filterCourses)
+            ui.sortField.addEventListener('input', filterCourses)
         }
+
     }
 
     function filterCourses () {
-        // Get values of search/filter fields
-        const keywords = ui.keywordsField.value;
-        const topic = ui.topicField.value;
-        const sortBy = ui.sortField.value;
+        const keywords = ui.keywordsField.value
+        const topic = ui.topicField.value
+        const sortBy = ui.sortField.value
     
         // Fetch matching courses from API
         smileschool.getCoursesByFilter(keywords, topic, sortBy)
             .then(data => {
                 // Update display
-                ui.updateCourses(data.courses);
-            });
+                ui.updateCourses(data.courses)
+            })
+        // Get values of search/filter fields
     }
 
     return {render}
